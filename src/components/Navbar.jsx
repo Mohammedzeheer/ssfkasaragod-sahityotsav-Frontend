@@ -74,43 +74,35 @@ function Navbar() {
       </a>
 
       {/* Mobile Nav */}
-   <div className="block lg:hidden z-40">
-  {!open ? (
-    <IoReorderThree
-      onClick={() => setOpen(true)}
-      size={40}
-      className="text-black transition-all duration-200"
-    />
-  ) : (
-    <IoClose
-      onClick={() => setOpen(false)}
-      size={40}
-      className="text-[#335C67] transition-all duration-200 z-50 relative"
-    />
-  )}
+      <div className="block lg:hidden z-40">
+        {!open ? (
+          <IoReorderThree
+            onClick={() => setOpen(true)}
+            size={40}
+            className="text-black transition-all duration-200"
+          />
+        ) : (
+          <IoClose
+            onClick={() => setOpen(false)}
+            size={40}
+            className="text-[#335C67] transition-all duration-200 z-50 relative"
+          />
+        )}
 
-  {open && (
-    <div
-      className="fixed top-0 right-0 h-1/2 w-full lg:w-8/12 backdrop-blur-[100px] bg-white/95 shadow-2xl z-40 flex flex-col gap-5 font-semibold text-lg p-6 pt-14 overflow-y-auto animate-slide-in"
-      data-aos="fade-down"
-    >
-      <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/">Home</Link>
-      <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/about">About</Link>
-      {/* <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/sessions">Sessions</Link> */}
-      {/* <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/schedule">Schedule</Link> */}
-      <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/gallery">Gallery</Link>
-      <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/result">Result</Link>
-{/* 
-      <a
-        href=""
-        className="mt-4 bg-[#335C67] hover:bg-[#9E2A2B] text-white rounded-lg px-5 py-2 text-center font-bold transition-all w-fit"
-      >
-        Join Us
-      </a> */}
-    </div>
-  )}
-</div>
-
+        {open && (
+          <div
+            className="fixed top-0 right-0 h-1/3 w-full lg:w-8/12 backdrop-blur-[100px] bg-white/95 shadow-2xl z-40 flex flex-col gap-5 font-semibold text-lg p-6 pt-14 overflow-y-auto animate-slide-in"
+            data-aos="fade-down"
+          >
+            <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/">Home</Link>
+            <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/about">About</Link>
+            {/* <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/sessions">Sessions</Link> */}
+            {/* <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/schedule">Schedule</Link> */}
+            <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/gallery">Gallery</Link>
+            <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/result">Result</Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
