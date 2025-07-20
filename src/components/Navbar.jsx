@@ -79,7 +79,7 @@ function Navbar() {
     <IoReorderThree
       onClick={() => setOpen(true)}
       size={40}
-      className="text-[#335C67] transition-all duration-200"
+      className="text-black transition-all duration-200"
     />
   ) : (
     <IoClose
@@ -91,7 +91,7 @@ function Navbar() {
 
   {open && (
     <div
-      className="fixed top-0 right-0 h-1/3 w-full lg:w-8/12 backdrop-blur-[100px] bg-white/95 shadow-2xl z-40 flex flex-col gap-5 font-semibold text-lg p-6 pt-24 overflow-y-auto animate-slide-in"
+      className="fixed top-0 right-0 h-1/2 w-full lg:w-8/12 backdrop-blur-[100px] bg-white/95 shadow-2xl z-40 flex flex-col gap-5 font-semibold text-lg p-6 pt-14 overflow-y-auto animate-slide-in"
       data-aos="fade-down"
     >
       <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/">Home</Link>
