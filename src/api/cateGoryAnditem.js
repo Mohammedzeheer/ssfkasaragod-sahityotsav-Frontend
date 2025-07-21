@@ -39,6 +39,15 @@ async function addItem(categoryId, itemName) {
   });
   return response.data;
 }
+
+async function addBulkItems(categoryId, itemNames) {
+  const response = await axios.post(`${baseUrl}/addbulkitems`, {
+    categoryId,
+    itemNames,
+  });
+  return response.data;
+}
+
 async function deleteItem(itemId) {
   const response = await axios.delete(`${baseUrl}/deleteitemname/${itemId}`);
   return response.data;
@@ -61,4 +70,5 @@ export {
   addItem,
   deleteItem,
   editItem,
+  addBulkItems
 };
