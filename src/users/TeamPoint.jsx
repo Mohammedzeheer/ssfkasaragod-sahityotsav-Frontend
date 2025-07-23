@@ -40,15 +40,43 @@ function TeamPoint() {
   };
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center p-4">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading team points...</p>
+  return (
+    <div className="min-h-screen bg-[#9E2A2B] py-16 sm:py-8">
+      <div className="px-4 max-w-md sm:max-w-2xl lg:max-w-4xl mx-auto">
+        <div className="text-center mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-2">
+            Loading Results...
+          </h1>
+          <p className="text-gray-300 text-sm sm:text-base">Team Rankings</p>
+        </div>
+        <div className="space-y-2 sm:space-y-2">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className="rounded-xl border border-gray-200 bg-gradient-to-r from-white to-gray-50 p-3 sm:p-4 shadow-sm"
+            >
+              <div className="flex items-center justify-between">
+                {/* Position shimmer */}
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full shimmer" />
+                  <div className="flex-1 min-w-0">
+                    <div className="h-4 sm:h-5 w-32 sm:w-48 rounded shimmer mb-2" />
+                    <div className="h-3 w-20 rounded shimmer" />
+                  </div>
+                </div>
+                {/* Points shimmer */}
+                <div className="text-right ml-4">
+                  <div className="h-5 w-12 sm:w-16 rounded shimmer mb-2" />
+                  <div className="h-3 w-10 rounded shimmer" />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
   return (
     // <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-4 sm:py-8">

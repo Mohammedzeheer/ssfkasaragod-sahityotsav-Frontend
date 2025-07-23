@@ -32,14 +32,12 @@ function Footer() {
     <>
 
       <div className="flex flex-col gap-8 py-14 mt-4 text-center w-full px-10 xl:px-56">
-        <h2 className="text-4xl lg:text-5xl text-[#335C67] font-bold">
-          Veranda
+        <h2 className="text-4xl lg:text-6xl text-[#335C67] font-bold font-manjari">
+          വരാന്ത
         </h2>
         <p className="text-lg lg:text-xl font-thin text-justify">{description} </p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-16 px-10 xl:px-56">
-
 
         {Object.values(brochure || {}).map((imgObj, index) => (
           imgObj?.path && (
@@ -50,7 +48,7 @@ function Footer() {
               alt={`Gallery ${index + 1}`}
             />
           )
-        ))} 
+        ))}
 
         {/* <img
           src="/image2.jpg"
@@ -59,7 +57,7 @@ function Footer() {
         /> */}
       </div>
 
-     <UnderFooter/>
+      <UnderFooter />
 
     </>
   )

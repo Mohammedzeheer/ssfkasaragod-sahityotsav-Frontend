@@ -20,6 +20,7 @@ import AddResults from "./admin/AddResults.jsx";
 import GalleryPage from "./users/GalleryPage.jsx";
 import AddGallery from "./admin/AddGallery.jsx";
 import ResultPage from "./components/Result.jsx";
+import AboutPage from "./components/About.jsx";
 
 const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<UserSide />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/result" element={<ResultPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/admin/login" element={isAdminLoggedIn ? <Navigate to={'/admin'} /> : <Login />} />
         <Route
           path="/admin"

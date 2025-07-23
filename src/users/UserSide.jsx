@@ -124,15 +124,25 @@ function UserSide() {
     }
   };
 
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   const nameRow = "flex flex-row mb-3 md:mr-5 lg:mr-0 ";
   const position =
     "text-center flext items-center poppins-bold text-3xl  me-3 text-gray-400 flex align-middle";
   const resultName = "poppins-semibold text-xl";
   const resultItem = "poppins-medium text-gray-600 -mt-1";
+
+  const getPrizeGradient = (index) => {
+    switch (index) {
+      case 0: return "from-yellow-400 to-yellow-600";
+      case 1: return "from-gray-300 to-gray-500";
+      case 2: return "from-amber-600 to-amber-800";
+      default: return "from-yellow-400 to-yellow-600";
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -180,30 +190,34 @@ function UserSide() {
 
         {results?.result && (
           <>
-            <div className="flex flex-col ml-16 md:flex-row justify-between  lg:px-52 ">
-              <div className={nameRow}>
-                <div className={position}>01</div>
-                <div className="text-start">
-                  <p className={resultName}>{results.result[0].firstPrize}</p>
-                  <p className={resultItem}>{results.result[0].firstTeam}</p>
-                </div>
-              </div>
-              <div className={nameRow}>
-                <div className={position}>02</div>
-                <div className="text-start">
-                  <p className={resultName}>{results.result[1].secPrize}</p>
-                  <p className={resultItem}>{results.result[1].secTeam}</p>
-                </div>
-              </div>
-              <div className={nameRow}>
-                <div className={position}>03</div>
-                <div className="text-start">
-                  <p className={resultName}>{results.result[2].thirdPrize}</p>
-                  <p className={resultItem}>{results.result[2].thirdTeam
-                  }</p>
-                </div>
+            <div className="bg-secondary rounded-2xl shadow-lg m-2 p-8 border border-gray-100">
+              <div className="grid md:grid-cols-3 gap-6">
+                {[0, 1, 2].map((index) => {
+                  const winner = results.result[index];
+                  if (!winner) return null;
+
+                  const prizeNames = [winner.firstPrize, winner.secPrize, winner.thirdPrize];
+                  const teams = [winner.firstTeam, winner.secTeam, winner.thirdTeam];
+                  const positions = ["First Place", "Second Place", "Third Place"];
+
+                  return (
+                    <div key={index} className="flex items-center p-4 bg-gray-50 rounded-xl">
+                      <div className="flex-shrink-0 mr-4">
+                        <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${getPrizeGradient(index)} flex items-center justify-center text-white font-bold text-lg`}>
+                          {index + 1}
+                        </div>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-primary">{positions[index]}</div>
+                        <div className="text-lg font-bold poppins-bold  text-gray-900">{prizeNames[index]}</div>
+                        <div className="text-sm text-gray-600">{teams[index]}</div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
+
 
             <div
 
