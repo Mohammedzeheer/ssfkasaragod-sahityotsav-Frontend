@@ -21,6 +21,7 @@ import GalleryPage from "./users/GalleryPage.jsx";
 import AddGallery from "./admin/AddGallery.jsx";
 import ResultPage from "./components/Result.jsx";
 import AboutPage from "./components/About.jsx";
+import { inject } from '@vercel/analytics';
 
 const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
@@ -135,3 +136,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>
 
 );
+
+inject();
