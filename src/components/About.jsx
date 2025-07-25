@@ -17,10 +17,10 @@ export default function SahityotsavAbout() {
   }, []);
 
   const images = [
-  "/about1.jpeg",
-  "/about2.jpeg",
-  "/about3.jpeg"
-];
+    "/about1.jpeg",
+    "/about2.jpeg",
+    "/about3.jpeg"
+  ];
 
 
   const stats = [
@@ -53,7 +53,7 @@ export default function SahityotsavAbout() {
                   }}
                 />
               </div>
-              <p className="text-gray-600 text-lg font-medium">Cultural Excellence Since 1993</p>
+              <p className="text-gray-600 text-lg poppins-medium">Cultural Excellence Since 1993</p>
             </div>
 
             {/* Image Carousel */}
@@ -98,8 +98,8 @@ export default function SahityotsavAbout() {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <stat.icon className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                  <div className="text-xl font-bold text-gray-800">{stat.value}</div>
-                  <div className="text-xs text-gray-600 leading-tight">{stat.label}</div>
+                  <div className="text-xl poppins-bold text-gray-800">{stat.value}</div>
+                  <div className="text-xs text-gray-600 poppins-normal leading-tight">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -137,10 +137,14 @@ export default function SahityotsavAbout() {
 
                 {/* CTA Button */}
                 <div className="mt-8 text-center">
-                  <button className="inline-flex items-center px-6 py-3 bg-primary rounded-full text-white font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                  <button
+                    onClick={() => window.open("https://whatsapp.com/channel/0029Vah3yMIFXUuiwpmjes30", "_blank")}
+                    className="inline-flex items-center px-6 py-3 bg-primary rounded-full text-white font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  >
                     Join Our Legacy
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
+
                 </div>
               </div>
 

@@ -84,7 +84,7 @@ function TeamPoint() {
       <div className="px-4 max-w-md sm:max-w-2xl lg:max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-100 mb-2">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl poppins-bold text-gray-100 mb-2">
             {afterCount === 1000 ? "🏆 Final Results" : ` After ${afterCount}`}
           </h1>
           <p className="text-gray-300 text-sm sm:text-base">Team Rankings</p>

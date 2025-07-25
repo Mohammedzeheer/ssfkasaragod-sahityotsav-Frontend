@@ -68,7 +68,7 @@ function Navbar1() {
         <Link className={`hover-underline-animation hover:scale-110 duration-150 transition-all ${gradientScroll ? 'after:bg-white' : 'after:bg-[#335C67]'}`} to="/result">Result</Link>
       </div>
 
-      <a href={""} className={`rounded text-white font-bold text-lg p-1.5 px-6 lg:block hidden ${gradientScroll ? 'bg-transparent border border-white hover:text-white hover:bg-[#335C67] hover:border-0' : 'text-white bg-[#335C67]'}`}>
+      <a href={"https://whatsapp.com/channel/0029Vah3yMIFXUuiwpmjes30"} className={`rounded text-white font-bold text-lg p-1.5 px-6 lg:block hidden ${gradientScroll ? 'bg-transparent border border-white hover:text-white hover:bg-[#335C67] hover:border-0' : 'text-white bg-[#335C67]'}`}>
         Join Us
       </a>
 
@@ -90,7 +90,7 @@ function Navbar1() {
             {/* <Link className="text-[#335C67]" to="/schedule">Schedule</Link> */}
             <Link className="text-[#335C67]" to="/gallery">Gallery</Link>
             <Link className="text-[#335C67]" to="/result">Result</Link>
-            <a href={''} className="bg-[#335C67] shadow-xl rounded-xl text-white font-bold text-lg p-2 px-6 w-fit">Join Us</a>
+            <a href={'https://whatsapp.com/channel/0029Vah3yMIFXUuiwpmjes30'} className="bg-[#335C67] shadow-xl rounded-xl text-white font-bold text-lg p-2 px-6 w-fit">Join Us</a>
           </div>
         )}
       </div>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { baseUrl, getDataServer } from "../api/apiCall.js";
 import { Clock, AlertCircle } from 'lucide-react';
 import toast, { Toaster } from "react-hot-toast";
-import Footer from "./Footer.jsx";
+import Footer from "../components/Footer.jsx";
 import ImageDownlad from "./ImageDownlad.jsx";
 import axios from "axios";
 import Home from "./Home.jsx";
@@ -12,6 +12,7 @@ import Gallery from "./Gallery.jsx";
 import { useNavigate } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Navbar from "../components/Navbar.jsx";
+import Theme from "../components/Theme.jsx";
 
 function UserSide() {
   const [category, setCategory] = useState("");
@@ -149,7 +150,7 @@ function UserSide() {
       <Home />
 
       <div id="results" className="w-full text-center ">
-        <h2 className="py-5 md:py-10 text-[#335C67] text-4xl lg:text-5xl  font-bold">
+        <h2 className="pt-8 pb-3 md:py-10 text-[#335C67] text-4xl lg:text-5xl poppins-bold">
           Results
         </h2>
         <div className="flex md:flex-row flex-col md:justify-between  poppins-medium   space-y-1.5 pt-5 lg:pt-10 md:space-y-0 px-10 py-10 lg:py-20 xl:px-56">
@@ -277,8 +278,9 @@ function UserSide() {
       </div>
 
       <TeamPoint />
+      <Theme />
       <Gallery />
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-6">
         <p
           onClick={() => navigate('/gallery')}
           className="text-blue-500 flex items-center gap-2 cursor-pointer hover:underline"
