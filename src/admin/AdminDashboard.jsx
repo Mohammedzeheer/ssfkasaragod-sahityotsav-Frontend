@@ -12,6 +12,7 @@ function AdminDashboard() {
     { title: "Add Team", icon: <FaLayerGroup />, color: "bg-indigo-500", path: "/admin/addteam" },
     { title: "Add Category", icon: <FaClipboardList />, color: "bg-cyan-500", path: "/admin/addcategory" },
     { title: "Add Item", icon: <FaClipboardList />, color: "bg-teal-500", path: "/admin/additem" },
+    { title: "Add Event", icon: <FaEnvelopeOpenText />, color: "bg-green-500", path: "/admin/addevent" }, 
     { title: "Add Gallery", icon: <GrGallery />, color: "bg-purple-500", path: "/admin/addgallery" },
     { title: "All Results", icon: <FaListAlt />, color: "bg-violet-500", path: "/admin/allresult" },
     { title: "Add Team Point", icon: <FaUsers />, color: "bg-amber-500", path: "/admin/addteampoint" },

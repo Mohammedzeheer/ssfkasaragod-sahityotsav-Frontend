@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Navbar from "../components/Navbar.jsx";
 import Theme from "../components/Theme.jsx";
+import EventImageCarousel from "../components/Event.jsx";
 
 function UserSide() {
   const [category, setCategory] = useState("");
@@ -288,6 +289,7 @@ function UserSide() {
           See more Images <FaLongArrowAltRight />
         </p>
       </div>
+      <EventImageCarousel />
       <Footer />
       {buttonShow && (
         <button

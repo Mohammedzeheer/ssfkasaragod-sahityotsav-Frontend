@@ -1,25 +1,25 @@
 import axios from "axios";
 const baseUrl = import.meta.env.VITE_BASE_URL;
-  
+
 async function startProgram() {
   const response = await axios.get(
     `${baseUrl}/startprogram`
   );
-  
+
   return response.data;
 }
 async function checkStartProgram() {
   const response = await axios.get(
     `${baseUrl}/checkstatprogram`
   );
-  
+
   return response.data;
 }
 async function resetProgram() {
   const response = await axios.get(
     `${baseUrl}/resetprogram`
   );
-  
+
   return response.data;
 }
 
@@ -27,21 +27,21 @@ async function checkforResult() {
   const response = await axios.get(
     `${baseUrl}/checkstatprogram`
   );
-  
+
   return response.data;
 }
 async function stopProgram() {
   const response = await axios.get(
     `${baseUrl}/stopprogram`
   );
-  
+
   return response.data;
 }
 async function getDataServer(item, category) {
   const response = await axios.get(
     `${baseUrl}/getresult/?item=${item}&category=${category}`
   );
- 
+
   return response.data;
 }
 
@@ -89,9 +89,9 @@ async function getTeamPoint() {
   return response.data;
 }
 
-async function scoreData(formData,afterCount) {
+async function scoreData(formData, afterCount) {
   try {
-    const response = await axios.post(`${baseUrl}/saveteampoint`, {formData,afterCount});
+    const response = await axios.post(`${baseUrl}/saveteampoint`, { formData, afterCount });
 
     return response.data;
   } catch (error) {
@@ -156,7 +156,7 @@ async function editTeam(teamId, teamName) {
   return response.data;
 }
 async function addToGallery(formData) {
-  const response =await axios.post(`${baseUrl}/upload-gallery`,formData);
+  const response = await axios.post(`${baseUrl}/upload-gallery`, formData);
   return response.data;
 }
 async function getGallery() {
@@ -168,8 +168,21 @@ async function get3fromGallery() {
   return response.data;
 }
 
- async function deleteGalleryImage(id) {
+async function deleteGalleryImage(id) {
   const response = await axios.delete(`${baseUrl}/delete-gallery/${id}`);
+  return response.data;
+}
+
+async function addEvent(formData) {
+  const response = await axios.post(`${baseUrl}/add-event`, formData);
+  return response.data;
+}
+async function getEvents() {
+  const response = await axios.get(`${baseUrl}/get-events`);
+  return response.data;
+}
+async function deleteEvent(teamId) {
+  const response = await axios.delete(`${baseUrl}/delete-event/${teamId}`);
   return response.data;
 }
 
@@ -198,5 +211,8 @@ export {
   addToGallery,
   getGallery,
   deleteGalleryImage,
-  get3fromGallery
+  get3fromGallery,
+  addEvent,
+  getEvents,
+  deleteEvent,
 };

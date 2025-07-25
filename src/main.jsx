@@ -22,6 +22,7 @@ import AddGallery from "./admin/AddGallery.jsx";
 import ResultPage from "./components/Result.jsx";
 import AboutPage from "./components/About.jsx";
 import { inject } from '@vercel/analytics';
+import AddEvents from "./admin/AddEvent.jsx";
 
 const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
@@ -128,6 +129,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={
             <ProtectedRoute>
               <AddGallery />
+            </ProtectedRoute>
+          }
+        />
+          <Route
+          path="admin/addevent"
+          element={
+            <ProtectedRoute>
+              <AddEvents />
             </ProtectedRoute>
           }
         />
