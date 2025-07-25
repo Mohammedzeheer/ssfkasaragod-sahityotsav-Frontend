@@ -261,11 +261,11 @@ function ResultPage() {
                           <div className="flex justify-center mb-2">
                             {getPrizeIcon(index)}
                           </div>
-                          <div className="text-white font-bold text-xl">{positions[index]} Place</div>
+                          <div className="text-white poppins-bold text-xl">{positions[index]} Place</div>
                         </div>
                         
                         <div className="p-6 text-center">
-                          <h3 className="text-2xl font-bold text-primary mb-2">
+                          <h3 className="text-2xl poppins-bold text-primary mb-2">
                             {prizeNames[index]}
                           </h3>
                           <p className="text-gray-600 text-lg mb-4">{teams[index]}</p>

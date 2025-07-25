@@ -60,7 +60,7 @@ function Navbar() {
       </a>
 
       {/* Desktop Nav */}
-      <div className="lg:flex gap-5 hidden font-semibold">
+      <div className="lg:flex gap-5 hidden poppins-medium">
         <Link className={`hover-underline-animation hover:scale-110 duration-150 transition-all ${gradientScroll ? 'after:bg-white' : 'after:bg-[#335C67]'}`} to="/">Home</Link>
         <Link className={`hover-underline-animation hover:scale-110 duration-150 transition-all ${gradientScroll ? 'after:bg-white' : 'after:bg-[#335C67]'}`} to="/about">About</Link>
         {/* <Link className={`hover-underline-animation hover:scale-110 duration-150 transition-all ${gradientScroll ? 'after:bg-white' : 'after:bg-[#335C67]'}`} to="/sessions">Sessions</Link> */}
@@ -69,7 +69,7 @@ function Navbar() {
         <Link className={`hover-underline-animation hover:scale-110 duration-150 transition-all ${gradientScroll ? 'after:bg-white' : 'after:bg-[#335C67]'}`} to="/result">Result</Link>
       </div>
 
-      <a href={"https://whatsapp.com/channel/0029Vah3yMIFXUuiwpmjes30"} className={`rounded text-white font-bold text-lg p-1.5 px-6 lg:block hidden ${gradientScroll ? 'bg-transparent border border-white hover:text-white hover:bg-[#335C67] hover:border-0' : 'text-white bg-[#335C67]'}`}>
+      <a href={"https://whatsapp.com/channel/0029Vah3yMIFXUuiwpmjes30"} className={`rounded text-white poppins-bold text-lg p-1.5 px-6 lg:block hidden ${gradientScroll ? 'bg-transparent border border-white hover:text-white hover:bg-[#335C67] hover:border-0' : 'text-white bg-[#335C67]'}`}>
         Join Us
       </a>
 
@@ -91,7 +91,7 @@ function Navbar() {
 
         {open && (
           <div
-            className="fixed top-0 right-0 h-1/3 w-full lg:w-8/12 backdrop-blur-[100px] bg-white/95 shadow-2xl z-40 flex flex-col gap-5 font-semibold text-lg p-6 pt-14 overflow-y-auto animate-slide-in"
+            className="fixed top-0 right-0 h-1/3 w-full lg:w-8/12 backdrop-blur-[100px] bg-secondary shadow-2xl z-40 flex flex-col gap-3 poppins-semibold text-lg p-6 pt-14 overflow-y-auto animate-slide-in"
             data-aos="fade-down"
           >
             <Link className="text-[#335C67] hover:text-[#9E2A2B] transition-all" to="/">Home</Link>
