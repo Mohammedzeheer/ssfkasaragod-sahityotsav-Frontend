@@ -149,7 +149,7 @@ function UserSide() {
     <>
       <Navbar />
       <Home />
-
+      <EventImageCarousel />
       <div id="results" className="w-full text-center ">
         <h2 className="pt-8 pb-3 md:py-10 text-[#335C67] text-4xl lg:text-5xl poppins-bold">
           Results
@@ -289,7 +289,7 @@ function UserSide() {
           See more Images <FaLongArrowAltRight />
         </p>
       </div>
-      <EventImageCarousel />
+
       <Footer />
       {buttonShow && (
         <button
