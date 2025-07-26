@@ -244,63 +244,62 @@ function ResultPage() {
             </div>
 
             {/* Winners Display and certificate */}
-            {/* <div className="grid lg:grid-cols-3 gap-8 mb-12 m-5">
-                {[0, 1, 2].map((index) => {
-                  const winner = results.result[index];
-                  if (!winner) return null;
-                  
-                  const prizes = ["First", "Second", "Third"];
-                  const prizeNames = [winner.firstPrize, winner.secPrize, winner.thirdPrize];
-                  const teams = [winner.firstTeam, winner.secTeam, winner.thirdTeam];
-                  const positions = ["1st", "2nd", "3rd"];
-                  
-                  return (
-                    <div key={index} className={`relative ${index === 0 ? 'lg:order-2 lg:-mt-8' : index === 1 ? 'lg:order-1' : 'lg:order-3'}`}>
-                      <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                        <div className={`bg-gradient-to-r ${getPrizeGradient(index)} p-4 text-center`}>
-                          <div className="flex justify-center mb-2">
-                            {getPrizeIcon(index)}
-                          </div>
-                          <div className="text-white poppins-bold text-xl">{positions[index]} Place</div>
+            <div className="grid lg:grid-cols-3 gap-8 mb-12 m-5">
+              {[0, 1, 2].map((index) => {
+                const winner = results.result[index];
+                if (!winner) return null;
+
+                const prizes = ["First", "Second", "Third"];
+                const prizeNames = [winner.firstPrize, winner.secPrize, winner.thirdPrize];
+                const teams = [winner.firstTeam, winner.secTeam, winner.thirdTeam];
+                const positions = ["1st", "2nd", "3rd"];
+
+                return (
+                  <div key={index} className={`relative ${index === 0 ? 'lg:order-2 lg:-mt-8' : index === 1 ? 'lg:order-1' : 'lg:order-3'}`}>
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                      <div className={`bg-gradient-to-r ${getPrizeGradient(index)} p-4 text-center`}>
+                        <div className="flex justify-center mb-2">
+                          {getPrizeIcon(index)}
                         </div>
-                        
-                        <div className="p-6 text-center">
-                          <h3 className="text-2xl poppins-bold text-primary mb-2">
-                            {prizeNames[index]}
-                          </h3>
-                          <p className="text-gray-600 text-lg mb-4">{teams[index]}</p>
-                          
-                          <button
-                            onClick={() => handleDownloadCertificate(
-                              index,
-                              prizeNames[index],
-                              prizes[index],
-                              results?.category?.categoryName,
-                              results?.item?.itemName
-                            )}
-                            className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2a4d56] transition-colors duration-200 flex items-center justify-center gap-2"
-                          >
-                            <Download className="h-4 w-4" />
-                            Download Certificate
-                          </button>
-                        </div>
+                        <div className="text-white poppins-bold text-xl">{positions[index]} Place</div>
                       </div>
 
-                      <div style={{ position: "absolute", left: "-9999px", top: 0 }}>
-                        <CertificateTemplate
-                          ref={certRefs[index]}
-                          winnerName={prizeNames[index]}
-                          prize={prizes[index]}
-                          category={results?.category?.categoryName}
-                          item={results?.item?.itemName}
-                          team={teams[index]}
-                        />
+                      <div className="p-6 text-center">
+                        <h3 className="text-2xl poppins-bold text-primary mb-2">
+                          {prizeNames[index]}
+                        </h3>
+                        <p className="text-gray-600 text-lg mb-4">{teams[index]}</p>
+
+                        <button
+                          onClick={() => handleDownloadCertificate(
+                            index,
+                            prizeNames[index],
+                            prizes[index],
+                            results?.category?.categoryName,
+                            results?.item?.itemName
+                          )}
+                          className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2a4d56] transition-colors duration-200 flex items-center justify-center gap-2"
+                        >
+                          <Download className="h-4 w-4" />
+                          Download Certificate
+                        </button>
                       </div>
                     </div>
-                  );
-                })}
-              </div> */}
 
+                    <div style={{ position: "absolute", left: "-9999px", top: 0 }}>
+                      <CertificateTemplate
+                        ref={certRefs[index]}
+                        winnerName={prizeNames[index]}
+                        prize={prizes[index]}
+                        category={results?.category?.categoryName}
+                        item={results?.item?.itemName}
+                        team={teams[index]}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
 
